@@ -1,3 +1,4 @@
+{% trans_default_domain 'FOSUserBundle' %}
 {% import "AvanzuAdminThemeBundle:layout:macros.html.twig" as macro %}
 <!doctype html>
 <!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
@@ -34,17 +35,22 @@
     {% endblock %}
 
 </head>
-<body class="bg-black">
-
-<div class="form-box" id="login-box">
-    {% block page_content %}{% endblock %}
-</div>
+<body class="login-page">
+<div class="login-box">
+    <div class="login-logo">
+        {% block page_login_logo_content %}{% endblock %}
+    </div><!-- /.login-logo -->
+    <div class="login-box-body">
+        {% block page_login_box_content %}{% endblock %}
+        <!--<a href="#">I forgot my password</a><br>
+        <a href="register.html" class="text-center">Register a new membership</a> -->
+    </div>
+</div><!-- /.login-box -->
 
 
 
 {# ------------------------------------------------------------------------------------------------------ JAVASCRIPTS #}
 {% block javascripts %}
-
     {% javascripts '@admin_lte_all' %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -52,6 +58,15 @@
 
 {# ----------------------------------------------------------------------------------------------- JAVASCRIPTS_INLINE #}
 {% block javascripts_inline %}
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
 {% endblock %}
 </body>
 </html>

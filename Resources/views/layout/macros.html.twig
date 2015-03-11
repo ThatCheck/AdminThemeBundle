@@ -26,6 +26,25 @@
     </div>
 {% endmacro %}
 
+{% macro box_alert(type, title, text, icon, dismissable) %}
+    {% set class_alert = 'alert alert-' ~ type %}
+    {% if dismissable %}
+        {% set class_alert = class_alert ~ ' alert-dismissable' %}
+    {% endif %}
+    <div class="{{ class_alert }}">
+        {% if dismissable %}
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        {% endif %}
+        <h4>
+            {% if icon %}
+                <i class="icon fa fa-{{ icon }}"></i>
+            {% endif %}
+            {{ title }}
+        </h4>
+        {{ text }}
+    </div>
+{% endmacro %}
+
 
 {% macro avatar(image, alt, class) %}
     {% if image %}
