@@ -169,6 +169,16 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           '@AvanzuAdminThemeBundle/Resources/public/img/avatar.png'
                                       )
                                   ),
+                                  'admin_lte_icheck'     => array(
+                                      'inputs' => array(
+                                          $lteJSBase . 'plugins/iCheck/icheck.min.js',
+                                      )
+                                  ),
+                                  'admin_lte_icheck_css' => array(
+                                      'inputs' => array(
+                                          $lteCssBase . 'plugins/iCheck/square/blue.css',
+                                      )
+                                  ),
                                   'admin_lte_all'          => array(
                                       'inputs' => array(
                                           '@tools_js',
@@ -176,6 +186,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           '@admin_lte_wysiwyg',
                                           '@admin_lte_morris',
                                           '@admin_lte_calendar',
+                                          '@admin_lte_icheck',
                                           '@admin_lte_js',
                                           //  '@admin_lte_flot',
                                       )
@@ -186,6 +197,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           '@admin_lte_morris_css',
                                           '@admin_lte_wysiwyg_css',
                                           '@admin_lte_forms_css',
+                                          '@admin_lte_icheck_css',
                                           '@admin_lte_css'
                                       )
                                   ),
