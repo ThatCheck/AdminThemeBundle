@@ -1,0 +1,19 @@
+{% if custom_class is not defined %}
+    {% set custom_class = '' %}
+{% endif %}
+<div class="box box-{{ box_type }} {{ custom_class }}">
+    <div class="box-header">
+        <h3 class="box-title">{% block box_title %}{% endblock %}</h3>
+        {% if box_collapse is defined %}
+        <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        </div>
+        {% endif %}
+    </div>
+    <div class="box-body">
+        {% block box_content %} {% endblock %}
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        {% block box_footer %} {% endblock %}
+    </div>
+</div>

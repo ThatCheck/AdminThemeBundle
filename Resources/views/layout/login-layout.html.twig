@@ -1,4 +1,3 @@
-{% trans_default_domain 'FOSUserBundle' %}
 {% import "AvanzuAdminThemeBundle:layout:macros.html.twig" as macro %}
 <!doctype html>
 <!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
@@ -36,17 +35,14 @@
 
 </head>
 <body class="login-page">
-<div class="login-box">
-    <div class="login-logo">
-        {% block page_login_logo_content %}{% endblock %}
-    </div><!-- /.login-logo -->
-    <div class="login-box-body">
-        {% block page_login_box_content %}{% endblock %}
-        <!--<a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a> -->
-    </div>
-</div><!-- /.login-box -->
-
+    <div class="login-box">
+        <div class="login-logo">
+            {% block page_login_logo_content %}{% endblock %}
+        </div><!-- /.login-logo -->
+        <div class="login-box-body">
+            {% block page_login_box_content %}{% endblock %}
+        </div>
+    </div><!-- /.login-box -->
 
 
 {# ------------------------------------------------------------------------------------------------------ JAVASCRIPTS #}
