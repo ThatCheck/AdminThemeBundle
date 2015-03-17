@@ -1,19 +1,33 @@
 {% if custom_class is not defined %}
     {% set custom_class = '' %}
 {% endif %}
+
+{% if no_box_content is not defined %}
+    {% set no_box_content = false %}
+
+{% endif %}
 <div class="box box-{{ box_type }} {{ custom_class }}">
     <div class="box-header">
         <h3 class="box-title">{% block box_title %}{% endblock %}</h3>
-        {% if box_collapse is defined %}
         <div class="box-tools pull-right">
-            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            {% if box_collapse is defined or box_remove is defined %}
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            {% endif %}
+            {% if box_remove is defined %}
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            {% endif %}
+            {% block box_button %}
+            {% endblock %}
         </div>
-        {% endif %}
     </div>
-    <div class="box-body">
-        {% block box_content %} {% endblock %}
-    </div><!-- /.box-body -->
+    {% if no_box_content == false %}
+        <div class="box-body">
+            {% block box_content %} {% endblock %}
+        </div><!-- /.box-body -->
+    {% endif %}
+    {% if box_footer_show is defined %}
     <div class="box-footer">
         {% block box_footer %} {% endblock %}
     </div>
+    {% endif %}
 </div>

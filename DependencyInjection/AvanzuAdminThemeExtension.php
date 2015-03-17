@@ -92,8 +92,8 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                   'admin_lte_js'           => array(
                                       'inputs' => array(
                                           $lteJSBase . 'plugins/bootstrap-slider/bootstrap-slider.js',
-                                          $lteJSBase . 'plugins/datatables/jquery.dataTables.js',
-                                          $lteJSBase . 'plugins/datatables/dataTables.bootstrap.js',
+                                          //$lteJSBase . 'plugins/datatables/jquery.dataTables.js',
+                                          //$lteJSBase . 'plugins/datatables/dataTables.bootstrap.js',
                                           $lteJSBase . 'plugins/slimScroll/jquery.slimscroll.js',
                                           $jsAssets . 'public/js/adminLTE.js',
                                       )
