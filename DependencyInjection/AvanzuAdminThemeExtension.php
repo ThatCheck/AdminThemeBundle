@@ -92,6 +92,7 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                   'admin_lte_js'           => array(
                                       'inputs' => array(
                                           $lteJSBase . 'plugins/bootstrap-slider/bootstrap-slider.js',
+                                          //$lteJSBase . 'plugins/ionslider/ion.rangeSlider.min.js',
                                           //$lteJSBase . 'plugins/datatables/jquery.dataTables.js',
                                           //$lteJSBase . 'plugins/datatables/dataTables.bootstrap.js',
                                           $lteJSBase . 'plugins/slimScroll/jquery.slimscroll.js',
@@ -104,6 +105,8 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                         //  $lteCss . 'jQueryUI/jquery-ui-1.10.3.custom.css',
                                           $cssAssets . 'vendor/bootstrap/dist/css/bootstrap.min.css',
                                           $lteCssBase . 'plugins/bootstrap-slider/slider.css',
+                                          //$lteCssBase . 'plugins/ionslider/ion.rangeSlider.css',
+                                          //$lteCssBase . 'plugins/ionslider/ion.rangeSlider.skinFlat.css',
                                           $lteCssBase . 'plugins/datatables/dataTables.bootstrap.css',
                                           $cssAssets . 'vendor/fontawesome/css/font-awesome.min.css',
                                           $cssAssets . 'vendor/ionicons/css/ionicons.min.css',
