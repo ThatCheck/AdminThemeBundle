@@ -116,10 +116,20 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                           // $lteFont . 'ionicons.eot',
                                       )
                                   ),
+                                  'admin_lte_forms_daterangepicker_js'     => array(
+                                      'inputs' => array(
+                                          $lteJSBase . 'plugins/daterangepicker/daterangepicker.js',
+                                          //   $lteJs.'plugins/input-mask/*',
+                                      )
+                                  ),
+                                  'admin_lte_forms_daterangepicker_css'    => array(
+                                      'inputs' => array(
+                                          $lteCssBase . 'plugins/daterangepicker/daterangepicker-bs3.css',
+                                      )
+                                  ),
                                   'admin_lte_forms_js'     => array(
                                       'inputs' => array(
                                           $lteJSBase . 'plugins/colorpicker/bootstrap-colorpicker.js',
-                                          $lteJSBase . 'plugins/daterangepicker/daterangepicker.js',
                                           $lteJSBase . 'plugins/timepicker/bootstrap-timepicker.js',
                                           $lteJSBase . 'plugins/input-mask/jquery.inputmask.js',
                                           //   $lteJs.'plugins/input-mask/*',
@@ -128,7 +138,6 @@ class AvanzuAdminThemeExtension extends Extension implements PrependExtensionInt
                                   'admin_lte_forms_css'    => array(
                                       'inputs' => array(
                                           $lteCssBase . 'plugins/colorpicker/bootstrap-colorpicker.css',
-                                          $lteCssBase . 'plugins/daterangepicker/daterangepicker-bs3.css',
                                           $lteCssBase . 'plugins/timepicker/bootstrap-timepicker.css',
                                       )
                                   ),
